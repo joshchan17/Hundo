@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 		movementType.Move(rb, movementInput);
 	
 		if (isFiring && FireSlot != null) {
-			FireSlot.TryUse();
+			FireSlot.Use();
 		}
 
 		UpdateAnimations();

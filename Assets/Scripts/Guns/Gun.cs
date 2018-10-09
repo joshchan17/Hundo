@@ -9,7 +9,7 @@ public class Gun : Item {
 
     public AudioSource gunShot;
 
-	protected override void OnUse() {
+	public override void Use() {
 		FiringPattern.Fire(ProjectilePrefab, SpawnPoint, ProjectileUpdate);
         gunShot.Play();
 	}

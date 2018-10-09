@@ -39,7 +39,7 @@ public class TurretController : MonoBehaviour {
             targetVec = target.transform.position - BulletSpawn.position;
             targetAngle = Mathf.Atan2(targetVec.y, targetVec.x) * Mathf.Rad2Deg;
             BulletSpawn.rotation = Quaternion.Euler(0.0f, 0.0f, targetAngle);
-            TurretGun.TryUse();
+            TurretGun.Use();
         }
     }
 

@@ -65,8 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953432273606456}
   - component: {fileID: 114151863520208824}
-  - component: {fileID: 114275420793055672}
-  - component: {fileID: 114773901227111096}
+  - component: {fileID: 114112502454419704}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -96,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094983577803386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.86, y: 1.02, z: 0}
+  m_LocalPosition: {x: 26.5, y: 55.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4953432273606456}
@@ -109,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887856761467910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.99, y: -4.39, z: 0}
+  m_LocalPosition: {x: 17.6, y: 59.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4953432273606456}
@@ -122,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549000800781808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.94, y: 9.03, z: 0}
+  m_LocalPosition: {x: 39.11, y: 61.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4953432273606456}
@@ -135,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254309520118738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.18, y: 5.14, z: 0}
+  m_LocalPosition: {x: 16.7, y: 5.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4953432273606456}
@@ -158,6 +157,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114112502454419704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794306204479766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baa056c308ee7c448b01909f4c3d84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextField: {fileID: 0}
+  TimeUntilWarning: 5
 --- !u!114 &114151863520208824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,50 +185,26 @@ MonoBehaviour:
   - name: Round 1
     enemy: {fileID: 4515150376602404, guid: 89deece8889e9454c9bd65a7aac9c0c4, type: 2}
     count: 10
-    rate: 2
+    rate: 4
   - name: Round 2
     enemy: {fileID: 4515150376602404, guid: 89deece8889e9454c9bd65a7aac9c0c4, type: 2}
     count: 15
-    rate: 1.5
+    rate: 3
   - name: Round 3
     enemy: {fileID: 4515150376602404, guid: 89deece8889e9454c9bd65a7aac9c0c4, type: 2}
     count: 20
-    rate: 1.5
+    rate: 2.5
   - name: Round 4
     enemy: {fileID: 4515150376602404, guid: 89deece8889e9454c9bd65a7aac9c0c4, type: 2}
     count: 50
-    rate: 1
+    rate: 2
+  - name: Round 4
+    enemy: {fileID: 4515150376602404, guid: 89deece8889e9454c9bd65a7aac9c0c4, type: 2}
+    count: 50
+    rate: 2
   spawnPoints:
   - {fileID: 4941190585468950}
   - {fileID: 4588449533567424}
   - {fileID: 4603266123591144}
-  timeBetweenWaves: 5
---- !u!114 &114275420793055672
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1794306204479766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52ae3d2c8b5d974b903545d00e3b036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 20
---- !u!114 &114773901227111096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1794306204479766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85adccd56ec640245b9b385c833def3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 180
-  gameState: 0
-  song: {fileID: 0}
-  uiText: {fileID: 0}
-  warningTimer: {fileID: 114275420793055672}
-  wave: {fileID: 114151863520208824}
+  timeBetweenWaves: 10
+  WaveTimerUI: {fileID: 114112502454419704}

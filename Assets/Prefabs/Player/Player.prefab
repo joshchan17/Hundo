@@ -301,8 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a3c3703156d5a45a016e395ac0dae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  MovementSpeed: 0
   FireSlot: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!114 &114514395708599330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,8 +354,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf257d311375c4284f535ce8d5204f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  body: {fileID: 0}
+  horizontal: 0
+  vertical: 0
+  moveLimiter: 0.7
   runSpeed: 4
+  playerMoving: 0
+  lastMove: {x: 0, y: 0}
+  mainCamera: {fileID: 0}
+  movementInput: {x: 0, y: 0, z: 0}
   controlThisObject: {fileID: 0}
+  mousePos: {x: 0, y: 0, z: 0}
+  mouseVec: {x: 0, y: 0}
+  mouseAngle: 0
 --- !u!212 &212519542614633542
 SpriteRenderer:
   m_ObjectHideFlags: 1

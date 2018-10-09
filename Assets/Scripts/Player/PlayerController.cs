@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
 
-[RequireComponent (typeof(Movement))]
 [RequireComponent (typeof(Rigidbody2D))]
 [RequireComponent (typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-
-	public Camera cam;
+	public float MovementSpeed;
 	public Item FireSlot;
+	public Camera Camera;
 	private Animator anim;
 	private Rigidbody2D rb;
-	private Movement movementType;
 	private Vector2 movementInput;
 	private Vector2 mouseVec;
 	private float mouseAngle;
 	private bool isFiring;
 
 	private void Awake() {
-		movementType = GetComponent<Movement>();
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 	}
@@ -29,8 +26,8 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private void FixedUpdate() {
-		movementType.Move(rb, movementInput);
-	
+		rb.velocity = movementInput * MovementSpeed;
+
 		if (isFiring && FireSlot != null) {
 			FireSlot.Use();
 		}
@@ -39,7 +36,7 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private void UpdateAnimations() {
-		mouseVec = Input.mousePosition - cam.WorldToScreenPoint(transform.position);
+		mouseVec = Input.mousePosition - Camera.WorldToScreenPoint(transform.position);
 		mouseAngle = Mathf.Atan2(mouseVec.y, mouseVec.x) * Mathf.Rad2Deg;
 
 		if (movementInput != Vector2.zero) { // Is player moving?

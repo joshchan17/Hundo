@@ -4,7 +4,8 @@ public abstract class Damageable : MonoBehaviour {
 
 	public enum Status { ACTIVE, DESTROYED };
 
-	public float HP;
+	public float MaxHP;
+	public float CurHP; 
 	public Status status;
 
 	protected abstract void OnDamaged(float damage);
@@ -15,7 +16,7 @@ public abstract class Damageable : MonoBehaviour {
 		if (status != Status.DESTROYED) {
 			OnDamaged(damage);
 			
-			if (HP <= 0.0f) {
+			if (CurHP <= 0.0f) {
 				OnDestroyed();
 				status = Status.DESTROYED;
 			}

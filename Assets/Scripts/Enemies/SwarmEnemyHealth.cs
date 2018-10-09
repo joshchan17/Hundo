@@ -1,7 +1,7 @@
 ﻿public class SwarmEnemyHealth : Damageable {
 
 	protected override void OnDamaged(float damage) {
-		HP -= damage;
+		CurHP -= damage;
 	}
 
 	protected override void OnDestroyed() {

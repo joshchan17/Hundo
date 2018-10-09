@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1136668534441930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.94, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4639934485131264}
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609145647318242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.87, y: -0.4650299, z: -2.4578598}
+  m_LocalPosition: {x: 0.89, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4370692194789484}
@@ -178,12 +178,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: gun_pistol
-  FireRate: 0.84
+  FireRate: 0.15
   ProjectilePrefab: {fileID: 114368667084496816, guid: 1b8f3683b58ff2c46b6daef6ed1354d9,
     type: 2}
   SpawnPoint: {fileID: 4370692194789484}
   FireSound: {fileID: 82109221268787566}
-  Force: 0.1
+  Force: 28.16
 --- !u!212 &212237066124827702
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -52,9 +52,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108813694018266}
-  - component: {fileID: 114516935795125700}
   - component: {fileID: 212633604471427484}
   - component: {fileID: 58950853433981916}
+  - component: {fileID: 114469318035514494}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -213,7 +213,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114516935795125700
+--- !u!114 &114469318035514494
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: gun_turret
-  FireRate: 0.21
+  FireRate: 0.69
   ProjectilePrefab: {fileID: 114368667084496816, guid: 1b8f3683b58ff2c46b6daef6ed1354d9,
     type: 2}
   SpawnPoint: {fileID: 4492652647311370}

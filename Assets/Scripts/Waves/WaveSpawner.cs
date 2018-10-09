@@ -20,7 +20,9 @@ public class WaveSpawner : MonoBehaviour {
     public Transform[] spawnPoints;
 
     public float timeBetweenWaves = 30f;
-    private float waveCountdown;
+    public float waveCountdown { get; private set; }
+
+	public WaveTimerUI WaveTimerUI;
 
     private float searchCountdown = 1f;
 
@@ -33,6 +35,7 @@ public class WaveSpawner : MonoBehaviour {
     void Start() {
         nextWave = 0;
         waveCountdown = timeBetweenWaves;
+		WaveTimerUI.StartCountdown(timeBetweenWaves);
     }
 
     void Update() {
@@ -41,7 +44,7 @@ public class WaveSpawner : MonoBehaviour {
                 //new round               
                 WaveCompleted();
             } else {
-                return;
+                return; 
             }
         }
 
@@ -68,7 +71,6 @@ public class WaveSpawner : MonoBehaviour {
 
     void WaveCompleted() {
         //Debug.Log("Wave completed");
-
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
@@ -79,6 +81,7 @@ public class WaveSpawner : MonoBehaviour {
         else {
             nextWave++;
         }        
+		WaveTimerUI.StartCountdown(timeBetweenWaves);
     }
 
     IEnumerator SpawnWave(Wave _wave) {

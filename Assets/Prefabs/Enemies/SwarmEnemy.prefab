@@ -116,7 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9fbb0bba248054e96cfb2e0949c48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 60
+  MaxHP: 50
+  CurHP: 50
   status: 0
 --- !u!114 &114626723524357574
 MonoBehaviour:
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 2.41
   AttackSpeed: 0.33
-  AttackDamage: 0.34
+  AttackDamage: 7.13
 --- !u!212 &212628857401836338
 SpriteRenderer:
   m_ObjectHideFlags: 1

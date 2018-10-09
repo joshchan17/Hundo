@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class EnemyHealth : Damageable {
+﻿public class SwarmEnemyHealth : Damageable {
 
 	protected override void OnDamaged(float damage) {
 		HP -= damage;

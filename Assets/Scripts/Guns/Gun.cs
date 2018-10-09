@@ -3,18 +3,17 @@ using UnityEngine;
 
 public abstract class Gun : Item {
 
-	public Transform SpawnPoint;
-	public Projectile ProjectilePrefab; // Has events for on collide
-	public ProjectileUpdate ProjectileUpdate;
-    public AudioSource FireSound;
 	public float FireRate;
+	public Projectile ProjectilePrefab; // Has events for on collide
+	public Transform SpawnPoint;
+    public AudioSource FireSound;
 	private bool canFire;
 
 	public Gun() {
 		canFire = true;
 	}
 
-	protected abstract void Fire();
+	protected abstract void OnFire();
 
 	public override void Use() {
 		if (canFire) {
@@ -24,7 +23,7 @@ public abstract class Gun : Item {
 
 	private IEnumerator fireAndWait() {
 		canFire = false;
-		Fire();
+		OnFire();
 		FireSound.Play();
 		yield return new WaitForSeconds(FireRate);
 		canFire = true;

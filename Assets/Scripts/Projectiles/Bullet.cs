@@ -2,13 +2,9 @@
 
 public class Bullet : Projectile {
 
-	public float DamageValue;
+	public float Damage;
 
-	protected override void OnHit(Damageable damageable) {
-        damageable.Damage(DamageValue);
-    }
-
-	protected override void OnCollide(Collision2D coll) {
+	private void OnCollisionEnter2D(Collision2D coll) {
 		Destroy(gameObject);
 	}
 }

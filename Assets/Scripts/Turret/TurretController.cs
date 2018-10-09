@@ -39,7 +39,6 @@ public class TurretController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Enemy added to turret list.");
             enemies.Add(collision.gameObject);
         }
     }
@@ -48,7 +47,6 @@ public class TurretController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Enemy removed from list.");
             enemies.RemoveAll(x => x == collision.gameObject);
         }
     }

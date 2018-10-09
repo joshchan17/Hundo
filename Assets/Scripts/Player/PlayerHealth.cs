@@ -23,8 +23,6 @@ public class PlayerHealth : Damageable {
             CurHP -= damage;                      
 			HeartUI.UpdateHearts();
 			StartCoroutine(setInvincibleAndWait());
-		} else {
-			Debug.Log("I'm invincible!");
 		}
 	}
 

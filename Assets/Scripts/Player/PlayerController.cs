@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 		mouseVec = Input.mousePosition - Camera.WorldToScreenPoint(transform.position);
 		mouseAngle = Mathf.Atan2(mouseVec.y, mouseVec.x) * Mathf.Rad2Deg;
 
-		if (movementInput != Vector2.zero) { // Is player moving?
+		if (movementInput == Vector2.zero) {
 			anim.StopPlayback();
 		} else {
 			anim.StartPlayback();

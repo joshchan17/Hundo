@@ -3,15 +3,25 @@
 public class Bullet : Projectile {
 
 	public float Damage;
+    public float DisappearAfter;
 
-	private void OnCollisionEnter2D(Collision2D coll) {
+    private void Awake()
+    {
+        Destroy(gameObject, DisappearAfter);
+    }
+
+    private void OnCollisionEnter2D(Collision2D coll) {
 		Damageable damageable;
 		if (coll.gameObject.tag == "Enemy"
 			&& (damageable = coll.gameObject.GetComponent<Damageable>()) != null)
 		{
 			damageable.Damage(Damage);
-		}
 
-		Destroy(gameObject);
-	}
+        }
+        if (coll.gameObject.tag != "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
